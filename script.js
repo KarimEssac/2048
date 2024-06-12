@@ -228,46 +228,62 @@ function findArr(){
 console.log(mainArr)
 }*/
 
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-let xDown = null;
-let yDown = null;
+const gameGridContainer = document.querySelector('.Game');
+
+gameGridContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+
+let touchStartX = null;
+let touchStartY = null;
 
 function handleTouchStart(event) {
+    event.stopPropagation();
+    event.preventDefault(); // Prevent default scrolling behavior
     const firstTouch = event.touches[0];
-    xDown = firstTouch.clientX;
-    yDown = firstTouch.clientY;
+    touchStartX = firstTouch.clientX;
+    touchStartY = firstTouch.clientY;
 }
-function handleTouchMove(event) {
-    if (!xDown || !yDown) {
+
+gameGridContainer.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+function handleTouchEnd(event) {
+    event.stopPropagation();
+    event.preventDefault(); // Prevent default scrolling behavior
+
+    if (!touchStartX || !touchStartY) {
         return;
     }
 
-    let xUp = event.touches[0].clientX;
-    let yUp = event.touches[0].clientY;
+    const touchEndX = event.changedTouches[0].clientX;
+    const touchEndY = event.changedTouches[0].clientY;
 
-    let xDiff = xDown - xUp;
-    let yDiff = yDown - yUp;
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
 
-    if (Math.abs(yDiff) > Math.abs(xDiff)) {
-        if (yDiff >0)
-        slideUp();
-        else slideDown();
-    }
-    else if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff > 0) {
-           
-            slideLeft();
-        } else {
-            
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Horizontal swipe
+        if (deltaX > 0) {
+            // swipe right
             slideRight();
+        } else {
+            // swipe left
+            slideLeft();
+        }
+    } else {
+        // Vertical swipe
+        if (deltaY > 0) {
+            // swipe down
+            slideDown();
+        } else {
+            // swipe up
+            slideUp();
         }
     }
 
-    // Reset values
-    xDown = null;
-    yDown = null;
+    // Reset touch start coordinates
+    touchStartX = null;
+    touchStartY = null;
 }
+
 function slideUp() {
     let done = false;
             let counter =4;
