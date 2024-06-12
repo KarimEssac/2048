@@ -233,7 +233,7 @@ header img
 
 
 /*Boxes Fonts and properties*/
-@media screen and (min-width: 0) and (max-width: 500px) {
+@media screen and (min-width: 0) and (max-width: 400px) {
     .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
     {
         font-size: 2rem;
@@ -243,6 +243,24 @@ header img
     }
     .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
         font-size: 0.9rem;
+    }
+    .n131072box{
+        font-size: 0.7rem;
+    }
+    .ScoreBoard{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 500px) {
+    .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
+    {
+        font-size: 2rem;
+    }
+    .n128box,.n256box,.n512box{
+        font-size: 1.5rem;
+    }
+    .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
+        font-size: 1.6rem;
     }
     .n131072box{
         font-size: 0.7rem;
