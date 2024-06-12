@@ -1,0 +1,18 @@
+all boxes HTML
+
+                <div class="col box twobox">2</div>
+                <div class="col box n4box">4</div>
+                <div class="col box n8box">8</div>
+                <div class="col box n16box">16</div>
+                <div class="col box n32box">32</div>
+                <div class="col box n64box">64</div>
+                <div class="col box n128box">128</div>
+                <div class="col box n256box">256</div>
+                <div class="col box n512box">512</div>
+                <div class="col box n1024box">1024</div>
+                <div class="col box n2048box">2048</div>
+                <div class="col box n4096box">4096</div>
+                <div class="col box n8192box">8192</div>
+                <div class="col box n16384box">16384</div>
+                <div class="col box n32768box">32768</div>
+                <div class="col box n65536box">65536</div>

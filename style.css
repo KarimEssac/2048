@@ -1,0 +1,319 @@
+:root
+{
+    --theme-color-dark:rgb(8, 9, 10);
+    --theme-color-light:rgb(248,249,250);
+    --n2-color:#2E8B57;
+    --n4-color:#c9ff77;
+    --n8-color:#d1d137;
+    --n16-color:#f8a33b;
+    --n32-color:#FF4500;
+    --n64-color:#b30b0b;
+    --n128-color:#770000;
+    --n256-color: #8f138f;
+    --n512-color: #483D8B;
+    --n1024-color: #5d5d7e;
+    --n2048-color: #008B8B;
+    --n4096-color: rgb(15,136,7);
+    --n8192-color: #20B2AA;
+    --n16384-color: #4682B4;
+    --n32768-color: #191970;
+    --n65536-color: #48D1CC;
+    --n131072-color: #000000 ;
+    --lol:rgb(23, 26, 29);
+    --transition-duration: 0.3s;
+    transition: var(--transition-duration)
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 92%;
+  }
+body{
+    background-color: var(--theme-color-light);
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+.gameBody{
+    background: linear-gradient(185deg, var(--theme-color-light), rgba(46, 139, 87,0.4));
+    background-size: 400% 400%;
+    transition: background-position 10s ease;
+    -webkit-animation: Beam 30s ease infinite;
+    -moz-animation: Beam 30s ease infinite;
+    animation: Beam 30s ease infinite;
+}
+.gameBody.transition {
+    background-position: right;
+}
+.S
+{
+    background-color: var(--theme-color-dark);
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+header i
+{
+    cursor: pointer;
+    color: var(--theme-color-dark);
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+header h3{
+    color: var(--theme-color-dark);
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+header img
+{
+    cursor: pointer;
+    max-width: 20%;
+    height: auto;
+}
+.Game
+{
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    max-width:50%;
+    z-index: 50;
+}
+.box
+{
+    margin: 5px;
+    height: 16vh;
+    background-color: var(--theme-color-light);
+    font-size: 3.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.1s ease;
+    max-width: 100%;
+}
+.ScoreBoard
+{
+    color: var(--theme-color-dark);
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+.line{
+    background-color: rgb(221, 221, 221);
+    max-width: 100%;
+    height: 2px;
+}
+.sample
+{
+    width: 12rem;
+    height: 15vh;
+    background-color: var(--two-color);
+}
+#colorPalette{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#won, #lost{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#celebgif{
+    width: 40%;
+    margin-left: 10%;
+}
+/*BG Animation*/
+@-webkit-keyframes Beam {
+    0%{background-position:68% 0%}
+    50%{background-position:33% 100%}
+    100%{background-position:68% 0%}
+}
+@-moz-keyframes Beam {
+    0%{background-position:68% 0%}
+    50%{background-position:33% 100%}
+    100%{background-position:68% 0%}
+}
+@keyframes Beam {
+    0%{background-position:68% 0%}
+    50%{background-position:33% 100%}
+    100%{background-position:68% 0%}
+}
+/*Custom Screens*/
+
+
+
+/*game width and box height*/
+@media screen and (min-width:0) and (max-width:550px){
+    .box
+    {
+        height: 13vh;
+    }
+    .Game{
+        max-width: 95%;
+    }
+}
+@media screen and (min-width:550px) and (max-width:850px){
+    .box
+    {
+        height: 13vh;
+    }
+    .Game{
+        max-width: 85%;
+    }
+}
+@media screen and (min-width:850px) and (max-width:1050px){
+    .box
+    {
+        height: 13vh;
+    }
+    .Game{
+        max-width: 75%;
+    }
+}
+@media screen and (min-width:1050px) and (max-width:1350px){
+    .box
+    {
+        height: 14vh;
+    }
+    .Game{
+        max-width: 70%;
+    }
+}
+@media screen and (min-width:1351px) and (max-width:1550px){
+    .box
+    {
+        height: 14vh;
+    }
+    .Game{
+        max-width: 65%;
+    }
+}
+@media screen and (min-width:1551px) and (max-width:1800px){
+    .box
+    {
+        height: 14vh;
+    }
+    .Game{
+        max-width: 60%;
+    }
+}
+
+
+
+/*Bonus Sections screen*/
+@media screen and (min-width:0) and (max-width:1000px){
+    #won, #lost {
+        width: 80%;
+    }
+    #colorPalette{
+        width: 95%;
+    }
+}
+
+
+
+/*Boxes Fonts and properties*/
+@media screen and (min-width: 0) and (max-width: 500px) {
+    .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
+    {
+        font-size: 2rem;
+    }
+    .n128box,.n256box,.n512box{
+        font-size: 1.5rem;
+    }
+    .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
+        font-size: 0.9rem;
+    }
+    .n131072box{
+        font-size: 0.7rem;
+    }
+    .ScoreBoard{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
+    {
+        font-size: 3rem;
+    }
+    .n128box,.n256box,.n512box{
+        font-size: 2.5rem;
+    }
+    .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
+        font-size: 1.5rem;
+    }
+    .n131072box{
+        font-size: 1.2rem;
+    }
+    .ScoreBoard{
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
+    {
+        font-size: 4rem;
+    }
+    .n128box,.n256box,.n512box{
+        font-size: 3.5rem;
+    }
+    .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
+        font-size: 2.5rem;
+    }
+    .n131072box{
+        font-size: 2.2rem;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .Game{
+        max-width: 65%;
+    }
+    .n2box,.n4box,.n8box,.n16box,.n32box,.n64box
+    {
+        font-size: 4rem;
+    }
+    .n128box,.n256box,.n512box{
+        font-size: 3.5rem;
+    }
+    .n1024box , .n2048box , .n4096box , .n8192box,.n16384box,.n32768box,.n65536box{
+        font-size: 2.5rem;
+    }
+    .n131072box{
+        font-size: 2.2rem;
+    }
+}
+
+
+
+
+/*themes*/
+.dark-theme {
+    --theme-color-dark: black;
+    --theme-color-light: white;
+    transition: var(--transition-duration);
+}
+.light-theme {
+    --theme-color-dark: white;
+    --theme-color-light: black;
+    transition: var(--transition-duration);
+}

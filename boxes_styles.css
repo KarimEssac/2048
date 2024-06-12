@@ -1,0 +1,102 @@
+.n2box
+{
+    --animate-duration:0.1s;
+    color:aliceblue;
+    background-color: var(--n2-color);
+}
+.n4box
+{
+    --animate-duration:0.1s;
+    color:rgb(33,37,41);
+    background-color: var(--n4-color);
+}
+.n8box
+{
+    --animate-duration:0.1s;
+    color:rgb(255, 250, 243);
+    background-color: var(--n8-color);
+}
+.n16box
+{
+    --animate-duration:0.2s;
+    color:rgb(255, 250, 243);
+    background-color: var(--n16-color);
+}
+.n32box
+{
+    --animate-duration:0.2s;
+    color:rgb(255, 247, 236);
+    background-color: var(--n32-color);
+}
+.n64box
+{
+    --animate-duration:0.3s;
+    color:rgb(255, 247, 236);
+    background-color: var(--n64-color);
+}
+.n128box
+{
+    --animate-duration:0.4s;
+    color:rgb(255, 247, 236);
+    background-color: var(--n128-color);
+}
+.n256box
+{
+    --animate-duration:0.5s;
+    color:rgb(255, 247, 236);
+    background-color: var(--n256-color);
+}
+.n512box
+{
+    --animate-duration:0.5s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n512-color);
+}
+.n1024box
+{
+    --animate-duration:0.6s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n1024-color);
+}
+.n2048box
+{
+    --animate-duration:0.7s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n2048-color);
+}
+.n4096box
+{
+    --animate-duration:1.2s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n4096-color);
+}
+.n8192box
+{
+    --animate-duration:1.5s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n8192-color);
+}
+.n16384box
+{
+    --animate-duration:1.7s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n16384-color);
+}
+.n32768box
+{
+    --animate-duration:2.0s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n32768-color);
+}
+.n65536box
+{
+    --animate-duration:2.4s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n65536-color);
+}
+.n131072box
+{
+    --animate-duration:2.7s;
+    color:rgb(255, 251, 251);
+    background-color: var(--n131072-color)
+}
