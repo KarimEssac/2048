@@ -294,9 +294,8 @@ function handleTouchEnd(event) {
 
 function slideUp() {
     let done = false;
-            let counter =4;
+    let parr =[];
             for (let i =4 ;i<16;i++){
-                let parr =[];
                 if (boxes[i].textContent!=''){
                     for (let it = i;it>3;it-=4){
                     if ((boxes[it-4].textContent == '') ){
@@ -310,7 +309,7 @@ function slideUp() {
                     reanimate(boxes,it-4)
                     continue;
                     }
-                    else if (boxes[it-4].textContent == boxes[it].textContent && parr[boxes[it]] != 1){
+                    else if (boxes[it-4].textContent == boxes[it].textContent && parr[it-4] != 1){
                         let n = boxes[it].textContent
                         boxes[it].textContent =''
                         boxes[it].classList.remove('n'+n+'box')
@@ -318,7 +317,7 @@ function slideUp() {
                         boxes[it-4].classList.remove('n'+n+'box')
                         boxes[it-4].classList.add('n'+n*2+'box') 
                         done = true;
-                        parr[boxes[it-4]]=1
+                        parr[it-4]=1
                         removeanime(boxes,it);
                         reanimate(boxes,it-4)
                         getMax(n*2)
@@ -340,8 +339,8 @@ function slideUp() {
 }
 function slideRight() {
     let done = false;
+    let parr =[];
             for (let i =14 ;i>=0;){
-                let parr =[];
                 if (boxes[i].textContent!=''){
                     for (let it = i;(it!=15 && it!= 11 && it!=7 && it !=3);it++){
                     if ((boxes[it+1].textContent == '') ){
@@ -355,7 +354,7 @@ function slideRight() {
                     reanimate(boxes,it+1)
                     continue;
                     }
-                    else if (boxes[it+1].textContent == boxes[it].textContent && parr[boxes[it]] != 1){
+                    else if (boxes[it+1].textContent == boxes[it].textContent && parr[it+1] != 1){
                         let n = boxes[it].textContent
                         boxes[it].textContent =''
                         boxes[it].classList.remove('n'+n+'box')
@@ -363,7 +362,7 @@ function slideRight() {
                         boxes[it+1].classList.remove('n'+n+'box')
                         boxes[it+1].classList.add('n'+n*2+'box') 
                         done = true
-                        parr[boxes[it+1]]=1
+                        parr[it+1]=1
                         removeanime(boxes,it);
                         reanimate(boxes,it+1)
                         getMax(n*2)
@@ -387,8 +386,8 @@ function slideRight() {
 }
 function slideLeft(){
     let done = false;
+    let parr =[];
             for (let i =1 ;i<16;){
-                let parr =[];
                 if (boxes[i].textContent!=''){
                     for (let it = i;it%4!=0;it--){
                     if ((boxes[it-1].textContent == '') ){
@@ -402,7 +401,7 @@ function slideLeft(){
                     reanimate(boxes,it-1)
                     continue;
                     }
-                    else if (boxes[it-1].textContent == boxes[it].textContent && parr[boxes[it]] != 1){
+                    else if (boxes[it-1].textContent == boxes[it].textContent && parr[it-1] != 1){
                         let n = boxes[it].textContent
                         boxes[it].textContent =''
                         boxes[it].classList.remove('n'+n+'box')
@@ -410,7 +409,7 @@ function slideLeft(){
                         boxes[it-1].classList.remove('n'+n+'box')
                         boxes[it-1].classList.add('n'+n*2+'box') 
                         done = true
-                        parr[boxes[it-1]]=1
+                        parr[it-1]=1
                         removeanime(boxes,it);
                         reanimate(boxes,it-1)
                         getMax(n*2)
@@ -433,9 +432,8 @@ function slideLeft(){
 }
 function slideDown(){
     let done = false;
-            let counter =4;
+    let parr =[];
             for (let i =11 ;i>=0;i--){
-                let parr =[];
                 if (boxes[i].textContent!=''){
                     for (let it = i;it<12;it+=4){
                     if ((boxes[it+4].textContent == '') ){
@@ -449,7 +447,7 @@ function slideDown(){
                     reanimate(boxes,it+4)
                     continue;
                     }
-                    else if (boxes[it+4].textContent == boxes[it].textContent && parr[boxes[it]] != 1){
+                    else if (boxes[it+4].textContent == boxes[it].textContent && parr[it+4] != 1){
                         let n = boxes[it].textContent
                         boxes[it].textContent =''
                         boxes[it].classList.remove('n'+n+'box')
@@ -457,7 +455,7 @@ function slideDown(){
                         boxes[it+4].classList.remove('n'+n+'box')
                         boxes[it+4].classList.add('n'+n*2+'box') 
                         done = true
-                        parr[boxes[it+4]]=1
+                        parr[it+4]=1
                         removeanime(boxes,it);
                         reanimate(boxes,it+4)
                         getMax(n*2)
