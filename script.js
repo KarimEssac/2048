@@ -183,11 +183,19 @@ function modeChange(){
         darkLight.classList.add("fa-sun");
         root.style.setProperty('--theme-color-light', 'rgb(8, 9, 10)');
         root.style.setProperty('--theme-color-dark', 'rgb(248,249,250)');
+        let bg = document.querySelectorAll('.S');
+        bg.forEach(row => {
+            row.style.backgroundColor = '#7D7C7C'
+        });
     } else {
         darkLight.classList.remove("fa-sun");
         darkLight.classList.add("fa-moon");
         root.style.setProperty('--theme-color-light', 'rgb(248,249,250)');
         root.style.setProperty('--theme-color-dark', 'rgb(8, 9, 10)');
+        let bg = document.querySelectorAll('.S');
+        bg.forEach(row => {
+            row.style.backgroundColor = getComputedStyle(root).getPropertyValue('--theme-color-dark').trim();
+        });
     }
 }
 function paletteChange(){
